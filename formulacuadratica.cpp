@@ -4,13 +4,23 @@
 #include <windows.h>
 #include <cmath>
 
+	
+void limpiarPantalla()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+} // tuve q agregar esto por q trabajo en linux
+
 int main() {
 	int a, b, c, validacion;
 	float x, x2;
 	char respuesta;
 	inicio:
-		system("cls");
-		printf("Resuelve una ecuación cuadratica con este programa :D\n");
+		limpiarPantalla();
+		printf("Resuelve una ecuaciï¿½n cuadratica con este programa :D\n");
 		printf("Ingresa el valor del termino cuadratico: ");
 		scanf("%i", &a);
 		printf("Ingresa el valor del termino lineal: ");
@@ -41,8 +51,8 @@ int main() {
 			printf("\nx2: %f", x2);
 		}
 		
-		printf("\nHecho por: Said Jesús Sánchez Vega \nGrupo: 4IV13 \nFecha: 24/02/2026");
-		printf("\n¿Quieres iniciar de nuevo? [y/n]: ");
+		printf("\nHecho por: Said Jesï¿½s Sï¿½nchez Vega \nGrupo: 4IV13 \nFecha: 24/02/2026");
+		printf("\nï¿½Quieres iniciar de nuevo? [y/n]: ");
 		std::cin >> respuesta;
 		if(respuesta == 'y' || respuesta == 'Y') {
 			goto inicio;

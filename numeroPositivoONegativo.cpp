@@ -1,11 +1,18 @@
 #include <iostream> 
-#include <conio.h>
 #include <stdlib.h> 
 #include <stdio.h>
 
+void limpiarPantalla() {
+	#ifdef _WIN32
+		system("cls");
+	#else
+		system("clear");
+	#endif
+}
+
 int main() {
 	inicio:
-	system("cls");
+	limpiarPantalla();
 	float a;
 	char respuesta;
 	printf("Ingresa un valor: ");
@@ -17,11 +24,11 @@ int main() {
 		printf("Tu valor %f es mayor (positivo) que 0.", a);
 	}
 	
-	printf("\nHecho por: Said Jesús Sánchez Vega \nGrupo: 4IV13 \nFecha: 24/02/2026");
-	printf("¿Quieres iniciar de nuevo? [y/n]: ");
+	printf("\nHecho por: Said Jesï¿½s Sï¿½nchez Vega \nGrupo: 4IV13 \nFecha: 24/02/2026");
+	printf("ï¿½Quieres iniciar de nuevo? [y/n]: ");
 	std::cin >> respuesta;
 	if(respuesta == 'y' || respuesta == 'Y') {
-		system("cls");
+		limpiarPantalla();
 		goto inicio;
 	} else {
 		goto final;
