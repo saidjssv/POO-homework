@@ -11,18 +11,14 @@ void limpiarpantalla() {
 }
 
 int main() {
-
-    int edad;
+    int input;
     char resp;
-	printf(R"(Este programa te indica si puede0s obtener tu INE o no dependiendo de la edad que tengas
-Ahora indica tu edad: 
-)");
-    scanf("%d", &edad);
-        
-    if(edad < 18) {
-        printf("Lastima :(, aún no puedes tramitar tu ine");
-    } else {
-        printf("Ya puedes tramitar tu ine!!");
+    limpiarpantalla();
+    printf("Tabla de multiplicar con 20 factores\nIngresa un número: ");
+    scanf("%d", &input);
+
+    for(int i = 1; i <= 20; i++) {
+        printf("%d x %d = %d\n", input, i, input * i);
     }
 
     printf("Desea repetir el programa? [y/n]");
