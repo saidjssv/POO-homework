@@ -3,7 +3,7 @@
 
     ACLARACION: Este programa (y todos en realidad) fueron programados en Linux, por lo que
                 tuve que agregar modificaciones posiblemente sacadas de internet para poder 
-                hacer uso de cls, color, y otros comandos de terminal cmd que obviamente 
+                hacer uso de cls, y otros comandos de terminal cmd que obviamente 
                 no funcionan en linux, de ahí en fuera, todo el codigo fue hecho por mi
 
                 opciones: 
