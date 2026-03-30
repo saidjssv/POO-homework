@@ -98,14 +98,27 @@ int main() {
                 for(char letra = 'A'; letra <= 'Z'; letra++) {
                     std::cout << letra << " ";
                 }
-                std::cout << "Ahora minúsculas: " << std::endl;
+                std::cout << "\nAhora minúsculas: " << std::endl;
                 for(char letra = 'a'; letra <= 'z'; letra++) {
                     std::cout << letra << " ";
                 }
+                break;
+            }
+            case '4': {
+                seguir = false;
+                std::cout << "¡Gracias por usar el programa!\n"
+                          << "Programador: Said Jesús Sánchez Vega\n"
+                          << "Fecha 30/03/2026\n"
+                          << "Grupo: 4IV13\n";
+                break;
+            }
+            default: {
+                std::cout << "Opción no válida, por favor elige una opción del 1 al 4." << std::endl;
+                break;
             }
         }
 
-        std::cout << "Quieres reiniciar el programa? [y/n]: ";
+        std::cout << "\nQuieres reiniciar el programa? [y/n]: ";
         char respuesta;
         std::cin >> respuesta;
 
@@ -113,6 +126,10 @@ int main() {
             seguir = true;
         } else {
             seguir = false;
+            std::cout << "¡Gracias por usar el programa!\n"
+                      << "Programador: Said Jesús Sánchez Vega\n"
+                      << "Fecha 30/03/2026\n"
+                      << "Grupo: 4IV13\n";
         }
 
     } while(seguir == true);
