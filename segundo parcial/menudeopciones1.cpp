@@ -23,13 +23,7 @@
     Un gran ejemplo de lo que se explica arriba es esta función, la cual funciona para windows y para linux (y creo yo para MacOS).
 */
 
-void limpiarPantalla() {
-    #ifdef _WIN32
-        system("cls");
-    #else 
-        system("clear");
-    #endif    
-}
+
 
 int main() {
 
