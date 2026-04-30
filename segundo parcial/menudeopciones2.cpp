@@ -294,6 +294,7 @@ int main()
             break;
         }
         case '6': {
+            // nisiquiera se atrevan a preguntar como se hizo este caso pq ni yo se
         	limpiarPantalla();
             std::cout << "caso 6, cuadritos con dibujos oh yeahhhhhhh\n\n";
             // dibujo el cuadro xddxdx
@@ -505,7 +506,7 @@ int main()
 			//
             
 			std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-			
+		// nisiquiera se atrevan a preguntar como se hizo este caso pq ni yo se	
 			break;
         }
         
