@@ -3,19 +3,19 @@
  ACLARACION: Este programa (y todos en realidad) fueron programados en Linux, por lo que
                 tuve que agregar modificaciones posiblemente sacadas de internet para poder
                 hacer uso de cls, y otros comandos de terminal cmd que obviamente
-                no funcionan en linux, de ahí en fuera, todo el codigo fue hecho por mi
+                no funcionan en linux, de ahï¿½ en fuera, todo el codigo fue hecho por mi
 
         opciones: 1) Una tabla de valores para la funcion seno coseno tangente donde el usuario ingresa
                      los limites de la tabla
                   2) Calcular exponencial de euler (e^x)
                   3) Problema 1 pero con funciones inversas (arcoseno, arcocoseno, arcotangente)
                   4) Nos permita mostrar la serie de ullman
-                  5) Diseñar un codigo fuente  que nos permita mostrar cuadros cosentricos con colores
+                  5) Diseï¿½ar un codigo fuente  que nos permita mostrar cuadros cosentricos con colores
                   6) cuadrado de arriba pero con dibujos en los 4 cuadrantes
                   7) Crear tres arreglos con 10 elementos cada uno
-				  	 El vector 4 deberá de ordenar por el metodo de la burbuja los elementos del arreglo 1
-					 El arreglo 5 deberá almacenar la raiz cuadrada de todos los elementos del arreglo 2
-					 El arreglo 6 deberá de mostrar unicamente los elementos que sean +50 y -100 
+				  	 El vector 4 deberï¿½ de ordenar por el metodo de la burbuja los elementos del arreglo 1
+					 El arreglo 5 deberï¿½ almacenar la raiz cuadrada de todos los elementos del arreglo 2
+					 El arreglo 6 deberï¿½ de mostrar unicamente los elementos que sean +50 y -100 
                   8) Salir
 					
 */
@@ -85,7 +85,7 @@ void setColor(int color) {
 // espero neta q esto funcione fok
 void burbujeo(int array[], int n) {
 	
-	// dpmde array[] es el arreglo a ordenar, y n es el tamaño de este mismo
+	// dpmde array[] es el arreglo a ordenar, y n es el tamaï¿½o de este mismo
 		int longitud = n;
 		for(int j = 1; j < longitud - 1; j++) {
 			for(int k = 0; k < longitud - j + 1; k++) {
@@ -93,12 +93,13 @@ void burbujeo(int array[], int n) {
 					int aux = array[k];
 					array[k] = array[k + 1];
 					array[k + 1] = aux;
-					std::cout << longitud  << " en funcion"<< std::endl;  
+				// Linea de codigo que ya no es necesaria pq cumpliÃ³ su funciÃ³n: 
+                // std::cout << longitud  << " en funcion" << std::endl;  // Valida si se estÃ¡ ejecutando la funciÃ³n
 			}
 		}
 	}
-	
-	// SI FUNCIONÓ ARRIBA EL AMERICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ABAJO MOERNAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+    // resumen: si funcionÃ³
 		
 }
 
@@ -178,7 +179,7 @@ int main()
 
             float x;
 
-            std::cout << "Gran elección! Ingresa el valor de x para calcular e^x: ";
+            std::cout << "Gran elecciï¿½n! Ingresa el valor de x para calcular e^x: ";
             std::cin >> x;
 
             std::cout << "El resultado de e^x es: " << exp(x) << std::endl;
@@ -195,7 +196,7 @@ int main()
 
             int limite;
 
-            std::cout << "Ahora con inversas (cabe aclarar que solo están definidas para valores en el intervalo [-1, 1] en cuanto a la arsecante y arcosecante), ingresa el limite de la tabla: ";
+            std::cout << "Ahora con inversas (cabe aclarar que solo estï¿½n definidas para valores en el intervalo [-1, 1] en cuanto a la arsecante y arcosecante), ingresa el limite de la tabla: ";
             std::cin >> limite;
 
             std::cout << "-------------------- Arsecante --------------------\n";
@@ -227,7 +228,7 @@ int main()
 
             limpiarPantalla();
             long long int numero;
-            std::cout << "¡Demostremos que ese numero llega a 1! Ingresa un numero entero positivo: ";
+            std::cout << "ï¿½Demostremos que ese numero llega a 1! Ingresa un numero entero positivo: ";
             std::cin >> numero;
 
             while (numero != 1)
@@ -298,6 +299,7 @@ int main()
             break;
         }
         case '6': {
+            // nisiquiera se atrevan a preguntar como se hizo este caso pq ni yo se
         	limpiarPantalla();
             std::cout << "caso 6, cuadritos con dibujos oh yeahhhhhhh\n\n";
             // dibujo el cuadro xddxdx
@@ -455,7 +457,7 @@ int main()
             
             // TERCER CUADRANTE YA CASI TERMINO FAK
 
-            // división del cuadrante en 3
+            // divisiï¿½n del cuadrante en 3
             for(int x = 1; x < 40; x++) {
                 gotoxy(x, 20);
                 putchar('-');
@@ -509,7 +511,7 @@ int main()
 			//
             
 			std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-			
+		// nisiquiera se atrevan a preguntar como se hizo este caso pq ni yo se	
 			break;
         }
         
@@ -541,7 +543,7 @@ int main()
 					int array[9];
 					std::cout << "Datos del arreglo ordenados por el metodo burbuja.\n";
 					for(int i = 0; i <= 9; i++) {
-						std::cout << "Ingresa los datos de la posición [" << i << "]\n";
+						std::cout << "Ingresa los datos de la posicion [" << i << "]\n";
 						std::cin >> array[i];
 					}
 					
@@ -562,7 +564,8 @@ int main()
 				}
 				case '2': {
 					// raiz de todos los elementos
-					
+					limpiarPantalla();
+
 					int longitud = 0;
 					std::cout << "Define la longitud del array: ";
 					std::cin >> longitud;
@@ -602,6 +605,7 @@ int main()
                             std::cout << "Elemento [" << i << "]: " << arr[i] << std::endl;
                         }
                     }
+<<<<<<< HEAD
 					break;
 				}
 				case '4': {
@@ -637,6 +641,11 @@ int main()
 						std::cout << " | ";
 					}
 					
+=======
+
+
+
+>>>>>>> defcf8d2ce40fde631553952f2cbfc0f47dbfea0
 					break;
 				}
 				default: {
@@ -655,7 +664,7 @@ int main()
 
 		setColor(7);
         char respuesta;
-        std::cout << "\n¿Deseas volver al menú de opciones? [y/n]: ";
+        std::cout << "\nÂ¿Deseas volver al menu de opciones? [y/n]: ";
         std::cin >> respuesta;
 
         if (respuesta == 'y' || respuesta == 'Y')
@@ -664,10 +673,16 @@ int main()
         }
         else
         {
+            limpiarPantalla();
             seguir = false;
+<<<<<<< HEAD
             limpiarPantalla();
             std::cout << "¡Gracias por usar el programa!\n"
                       << "Programador: Said Jesús Sánchez Vega\n"
+=======
+            std::cout << "Â¡Gracias por usar el programa!\n"
+                      << "Programador: Said Jesus Sanchez Vega\n"
+>>>>>>> defcf8d2ce40fde631553952f2cbfc0f47dbfea0
                       << "Cuando se creo este codigo, solo dios y yo sabiamos por que y como funcionaba, ahora, solo dios sabe.\n"
                       << "Fecha 30/03/2026\n"
                       << "Grupo: 4IV13\n";
