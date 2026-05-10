@@ -31,6 +31,10 @@ Magenta: \033[35m
 Cian: \033[36m
 Blanco: \033[37m
 
+
+Funciones "IFDEF" sirven para detectar en que entorno (o sistema operativo) se ejecuta el programa, ya que pues ajá
+
+
 */
 
 #include <iostream>
@@ -40,6 +44,7 @@ Blanco: \033[37m
 #ifdef _WIN32
 #include <windows.h>
 #endif
+#include <string>
 
 void gotoxy(int x, int y)
 {
@@ -516,7 +521,9 @@ int main()
 			std::cout << "Estas son las opciones del submenu: \n"
 					  << "1) Arreglo ordenado por metodo de burbuja.\n"
 					  << "2) Raiz cuadrada de todos los elementos.\n"
-					  << "3) Mostrar unicamente elementos entre el rango +50 y -100.\n";
+					  << "3) Mostrar unicamente elementos entre el rango +50 y -100.\n"
+					  << "4) Uso de 3 funciones de cadenas.\n"
+					  << "5) Mostrar el codigo ascii extendido.\n";
 			std::cin >> eleccion;
 			
 			
@@ -576,7 +583,60 @@ int main()
 					break;
 				}
 				case '3': {
-					// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    // mostrar elementos entre +50 y -100
+                    limpiarPantalla();
+
+                    int size;
+                    std::cout << "Define la longitud del array: ";
+                    std::cin >> size;
+                    int arr[size];
+
+                    std::cout << "Ingresa los elementos del array: ";
+                    for(int i = 0; i < size; i++) {
+                        std::cin >> arr[i];
+                    }
+
+                    std::cout << "Estos son los elementos entre el rango +50 y -100: \n";
+                    for(int i = 0; i < size; i++) {
+                        if(arr[i] > -100 && arr[i] < 50) {
+                            std::cout << "Elemento [" << i << "]: " << arr[i] << std::endl;
+                        }
+                    }
+					break;
+				}
+				case '4': {
+					// Incorporar el uso de 3 funciones de cadenas con 5 lineas o 5 vectores
+					limpiarPantalla();
+					char frase[] = "Hola mundo desde c++ uwu";
+					
+					// funciones: strlen, strrev, strupr
+					
+					// longitud
+					
+					std::cout << "Longitud de la frase: " << strlen(frase);
+					
+					// al reves
+					
+					std::cout << "\nFrase al reves: " << strrev(frase);
+					
+					// en mayusculas
+					
+					strrev(frase);
+					std::cout << "\nFrase pero en mayusculas: " << strupr(frase);
+					
+					
+					break;
+				}
+				case '5': {
+					// codigo ascii entero
+					limpiarPantalla();
+					
+					// inicia desde el 33 por que de 0 - 33 no hay simbolos
+					for(int i = 33; i <= 256; i++) {
+						putchar(i);
+						std::cout << " | ";
+					}
+					
 					break;
 				}
 				default: {
@@ -605,6 +665,7 @@ int main()
         else
         {
             seguir = false;
+            limpiarPantalla();
             std::cout << "¡Gracias por usar el programa!\n"
                       << "Programador: Said Jesús Sánchez Vega\n"
                       << "Cuando se creo este codigo, solo dios y yo sabiamos por que y como funcionaba, ahora, solo dios sabe.\n"
@@ -614,3 +675,5 @@ int main()
 
     } while (seguir == true);
 }
+
+           
